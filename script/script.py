@@ -97,6 +97,13 @@ with mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_conf
                 if num_fingers_up == 1:  # Click
                     print("1 finger up: Click")
                     pyautogui.click()
+                if(num_fingers_up == 2):
+                    print("2 fingers up: Scroll")
+                    pyautogui.scroll(10)
+                if(num_fingers_up == 3):
+                    print("3 fingers up: Right click")
+                    pyautogui.rightClick()
+                
 
         # Draw face landmarks and check for blinking
         if face_results.multi_face_landmarks:

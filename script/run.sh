@@ -1,9 +1,9 @@
 #!bin/zsh
-rm -rf env/ venv/
+# rm -rf env/ venv/
 
-python3.11 -m venv env 
+python3.9 -m venv env 
 source env/bin/activate
-python3.11 -m pip install -r requirements.txt 
 pip install --upgrade pip
+python -m pip install -r requirements.txt 
 
-python3.11 script.py
+python script.py
